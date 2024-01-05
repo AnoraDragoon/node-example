@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "start-angular": "node --max-old-space-size=4096 ./node_modules/@angular/cli/bin/ng serve --ssl=true --ssl-cert=localhost.cer --ssl-key=localhost.key --port=44344",
+    "start-backend": "npm run build-backend && concurrently --kill-others \"npm run start-api\" \"npm run start-auth\" \"npm run start-docs\" \"npm run start-fin\" \"npm run start-oper\" \"npm run start-promo\" \"npm run start-ref\" \"npm run start-wf\"",
+    "build-backend": "dotnet build ..\\..\\Promociona.sln --configuration Services -p:DisableNswagg=true",
+    "start-api": "dotnet run --no-build --configuration Services --launch-profile Api.Dev --project ..\\..\\Promociona.Api\\Promociona.Api.csproj",
+    "start-auth": "dotnet run --no-build --configuration Services --launch-profile \"Auth.Dev\" --project ..\\..\\Promociona.Auth\\Promociona.Auth.csproj",
+    "start-docs": "dotnet run --no-build --configuration Services --launch-profile \"Docs.Dev\" --project ..\\..\\Promociona.Documents\\Promociona.Documents.csproj",
+    "start-fin": "dotnet run --no-build --configuration Services --launch-profile \"Fin.Dev\" --project ..\\..\\Promociona.Financial\\Promociona.Financial.csproj",
+    "start-oper": "dotnet run --no-build --configuration Services --launch-profile \"Oper.Dev\" --project ..\\..\\Promociona.Operations\\Promociona.Operations.csproj",
+    "start-promo": "dotnet run --no-build --configuration Services --launch-profile \"Promo.Dev\" --project ..\\..\\Promociona.Promotions\\Promociona.Promotions.csproj",
+    "start-ref": "dotnet run --no-build --configuration Services --launch-profile \"Ref.Dev\" --project ..\\..\\Promociona.ReferenceData\\Promociona.ReferenceData.csproj",
+    "start-wf": "dotnet run --no-build --configuration Services --launch-profile \"Wf.Dev\" --project ..\\..\\Promociona.Wf\\Promociona.Wf.csproj",
+    "build-dr": "ng build --configuration dr"
+  }
+}

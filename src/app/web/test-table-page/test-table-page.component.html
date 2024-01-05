@@ -1,0 +1,29 @@
+<div>
+  <table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+        <th sortable="prinexCodes" (sort)="onSort($event)"><span>Prinex</span></th>
+        <th sortable="promotionName" (sort)="onSort($event)"><span>Promoción</span></th>
+        <th class="center W165" sortable="createdDate" (sort)="onSort($event)"><span>Fecha de configuración</span></th>
+        <th sortable="createdByUserName" (sort)="onSort($event)"><span>Usuario</span></th>
+        <th class=" center"><span>Activo</span></th>
+        <th ><span></span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of list">
+
+      </tr>
+    </tbody>
+  </table>
+  <div class="d-flex justify-content-between p-2">
+		<ngb-pagination [collectionSize]="(total$ | async)!" [(page)]="service.page" [pageSize]="service.pageSize">
+		</ngb-pagination>
+
+		<select class="form-select" style="width: auto" name="pageSize" [(ngModel)]="service.pageSize">
+			<option [ngValue]="2">2 items per page</option>
+			<option [ngValue]="4">4 items per page</option>
+			<option [ngValue]="6">6 items per page</option>
+		</select>
+	</div>
+</div>
