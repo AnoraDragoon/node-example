@@ -8,6 +8,7 @@ import { HomePageComponent } from './web/home-page/home-page.component';
 import { TestTablePageComponent } from './web/test-table-page/test-table-page.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CompletedTableComponent } from './components/completed-table/completed-table.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CompletedTableComponent } from './components/completed-table/completed-
     HomePageComponent,
     TestTablePageComponent,
     HeaderComponent,
-    CompletedTableComponent
+    CompletedTableComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
