@@ -1,21 +1,22 @@
 <div>
-  <!-- <table class="table table-bordered table-striped table-hover">
+  <table>
+  <!-- <table class="table table-bordered table-striped table-hover"> -->
     <thead>
       <tr>
-        <th sortable="prinexCodes" (sort)="onSort($event)"><span>Prinex</span></th>
+        <!-- <th sortable="prinexCodes" (sort)="onSort($event)"><span>Prinex</span></th>
         <th sortable="promotionName" (sort)="onSort($event)"><span>Promoción</span></th>
         <th class="center W165" sortable="createdDate" (sort)="onSort($event)"><span>Fecha de configuración</span></th>
-        <th sortable="createdByUserName" (sort)="onSort($event)"><span>Usuario</span></th>
+        <th sortable="createdByUserName" (sort)="onSort($event)"><span>Usuario</span></th> -->
         <th class=" center"><span>Activo</span></th>
-        <th ><span></span></th>
+        <th ><span>Elemento</span></th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of list">
-
+      <tr *ngFor="let item of data; let i = index" [class.gray]="i % 2">
+        <td>1</td><td>{{item}}</td>
       </tr>
     </tbody>
-  </table> -->
+  </table>
   <div class="d-flex justify-content-between p-2">
 		<!-- <ngb-pagination [collectionSize]="(total$ | async)!" [(page)]="service.page" [pageSize]="service.pageSize">
 		</ngb-pagination>

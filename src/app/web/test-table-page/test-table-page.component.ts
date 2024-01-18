@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class TestTablePageComponent  {
 
-  public data: unknown[] = [];
+  public data: unknown[] = [1,3,2,4,5,6,7,8,9];
 
 
 }
