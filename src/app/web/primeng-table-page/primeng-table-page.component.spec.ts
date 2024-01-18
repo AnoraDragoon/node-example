@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TestTablePageComponent } from './test-table-page.component';
+import { PrimengTablePageComponent } from './primeng-table-page.component';
 
-describe('TestTablePageComponent', () => {
-    let component: TestTablePageComponent;
-    let fixture: ComponentFixture<TestTablePageComponent>;
+describe('PrimengTablePageComponent', () => {
+    let component: PrimengTablePageComponent;
+    let fixture: ComponentFixture<PrimengTablePageComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [TestTablePageComponent]
+            declarations: [PrimengTablePageComponent]
         })
             .compileComponents();
 
-        fixture = TestBed.createComponent(TestTablePageComponent);
+        fixture = TestBed.createComponent(PrimengTablePageComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

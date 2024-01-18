@@ -1,6 +1,6 @@
 import { TableData } from "./table-data.model";
 
-export const Data_table_mock: TableData[] = [
+export const DATA_TABLE_MOCK: TableData[] = [
   {
     id: 1,
     name: 'string',

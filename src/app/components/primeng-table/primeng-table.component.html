@@ -1,0 +1,19 @@
+
+<p-table [value]="data" [tableStyle]="{ 'min-width': '50rem' }">
+  <ng-template pTemplate="header">
+      <tr>
+          <th>Code</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Age</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-item>
+      <tr>
+          <td>{{ item.id }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.description }}</td>
+          <td>{{ item.age }}</td>
+      </tr>
+  </ng-template>
+</p-table>

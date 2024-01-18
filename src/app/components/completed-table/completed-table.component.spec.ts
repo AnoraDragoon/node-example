@@ -3,21 +3,21 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CompletedTableComponent } from './completed-table.component';
 
 describe('CompletedTableComponent', () => {
-  let component: CompletedTableComponent;
-  let fixture: ComponentFixture<CompletedTableComponent>;
+    let component: CompletedTableComponent;
+    let fixture: ComponentFixture<CompletedTableComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ CompletedTableComponent ]
-    })
-    .compileComponents();
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            declarations: [CompletedTableComponent]
+        })
+            .compileComponents();
 
-    fixture = TestBed.createComponent(CompletedTableComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+        fixture = TestBed.createComponent(CompletedTableComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });

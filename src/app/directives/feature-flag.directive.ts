@@ -3,20 +3,20 @@ import { FeatureFlagsService } from 'src/app/common/feature-flags.service';
 
 
 @Directive({
-  selector: '[featureFlag]'
+    selector: '[featureFlag]'
 })
 export class FeatureFlagDirective implements OnInit {
-  @Input() featureFlag: string;
-  constructor(
-    private template: TemplateRef<any>,
-    private container: ViewContainerRef,
-    private featureFlagService: FeatureFlagsService
-  ) {}
+    @Input() featureFlag: string = '';
+    constructor(
+        private template: TemplateRef<any>,
+        private container: ViewContainerRef,
+        private featureFlagService: FeatureFlagsService
+    ) { }
 
-  ngOnInit() {
-    const isEnabled = this.featureFlagService.isEnabled(this.featureFlag);
-    if (isEnabled) {
-      this.container.createEmbeddedView(this.template);
+    ngOnInit() {
+        const isEnabled = this.featureFlagService.isEnabled(this.featureFlag);
+        if (isEnabled) {
+            this.container.createEmbeddedView(this.template);
+        }
     }
-  }
 }
