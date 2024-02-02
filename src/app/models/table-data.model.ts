@@ -1,8 +1,8 @@
 export interface TableData {
-  id: number;
-  name: string;
-  date: Date;
-  description: string;
-  age: number;
-  place: string;
+    code: string;
+    name: string;
+    author: string;
+    date: Date;
+    amount: number;
+    quantity: number;
 }

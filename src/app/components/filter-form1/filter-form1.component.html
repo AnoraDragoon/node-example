@@ -1,0 +1,43 @@
+<div [formGroup]="form">
+  <div class="group">
+    <h5 class="title">PRINEX</h5>
+    <div class="form-group">
+      <div class="input-text">
+        <input type="text" class="form-control" placeholder="Seleccione promoción" formControlName="prinex" />
+      </div>
+    </div>
+  </div>
+
+  <div class="group">
+    <h5 class="title">Nombre simulación</h5>
+    <div class="form-group">
+      <div class="input-text">
+        <input type="text" class="form-control" placeholder="Seleccione promoción" formControlName="simulationName" />
+      </div>
+    </div>
+  </div>
+
+  <div class="group">
+    <h5 class="title">Creada por:</h5>
+    <div class="form-group">
+      <div class="select">
+        <select placeholder="Seleccione" formControlName="author">
+          <option *ngFor="let type of []" [value]="type">{{type}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="group">
+    <h5 class="title">Fecha</h5>
+    <div class="form-container label-W50">
+      <div class="input-group">
+        <input class="form-control" readonly="true" placeholder="dd/mm/yyyy" dateFormat="dd/MM/yyyy" name="dp"
+          formControlName="date" ngbDatepicker #d_startDate="ngbDatepicker" />
+        <button class="btn btn-outline-secondary bi bi-calendar3" (click)="d_startDate.toggle()" type="button"></button>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-primary" (click)="onCleanFilters()">Limpiar</button>
+</div>

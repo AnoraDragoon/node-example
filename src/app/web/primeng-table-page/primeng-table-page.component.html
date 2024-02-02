@@ -1,3 +1,21 @@
-<p>primeng-table-page works!</p>
-
-<app-primeng-table [data]="datatable"></app-primeng-table>
+<div class="row">
+  <div class="col-2">
+    <app-filter-form1 [form]="filterForm" (clean)="cleanFilters()"></app-filter-form1>
+  </div>
+  <div class="col">
+    <div>
+      <div class="active-filters">
+        <span class="m-1">Filters</span>
+        <span class="filter-name">Nombre simulación</span>
+        <span class="m-1">{{filterForm.controls['simulationName'].value}}</span>
+        <button class="clear-filter" (click)="resetFilter('simulationName')">
+          <span class="material-symbols-outlined"> cancel </span></button>
+      </div>
+    </div>
+    <div>
+      <app-primeng-table [data]="datatable" [totalRecords]="datatable.length" [authorList]="authorList"
+        [isLoading]="tableLoading" (reload)="reloadData($event)">
+      </app-primeng-table>
+    </div>
+  </div>
+</div>

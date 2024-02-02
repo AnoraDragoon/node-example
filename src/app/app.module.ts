@@ -13,7 +13,18 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { Table2Component } from './components/table2/table2.component';
 import { PrimengTablePageComponent } from './web/primeng-table-page/primeng-table-page.component';
 import { PrimengTableComponent } from './components/primeng-table/primeng-table.component';
+import { FilterForm1Component } from './components/filter-form1/filter-form1.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+/**
+ * Prime NG
+ */
 import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
+import { DropdownModule } from 'primeng/dropdown';
+import { CalendarModule } from 'primeng/calendar';
+// import { CalendarModule } from 'primeng/calendar';
+// import { InputNumberModule } from 'primeng/inputnumber';
 
 
 @NgModule({
@@ -26,14 +37,21 @@ import { TableModule } from 'primeng/table';
         HighlightDirective,
         Table2Component,
         PrimengTablePageComponent,
-        PrimengTableComponent
+        PrimengTableComponent,
+        FilterForm1Component
     ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
         AppRoutingModule,
         NgbModule,
-        TableModule
+        TableModule,
+        FormsModule,
+        ReactiveFormsModule,
+        ButtonModule,
+        InputTextModule,
+        DropdownModule,
+        CalendarModule
     ],
     providers: [],
     bootstrap: [AppComponent]
