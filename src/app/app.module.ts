@@ -23,8 +23,14 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { DropdownModule } from 'primeng/dropdown';
 import { CalendarModule } from 'primeng/calendar';
+import { Mapbox1PageComponent } from './web/mapbox1-page/mapbox1-page.component';
 // import { CalendarModule } from 'primeng/calendar';
 // import { InputNumberModule } from 'primeng/inputnumber';
+/**
+ * mapbox
+ */
+import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
+import { environment } from 'src/environments/environment';
 
 
 @NgModule({
@@ -38,7 +44,8 @@ import { CalendarModule } from 'primeng/calendar';
         Table2Component,
         PrimengTablePageComponent,
         PrimengTableComponent,
-        FilterForm1Component
+        FilterForm1Component,
+        Mapbox1PageComponent
     ],
     imports: [
         BrowserModule,
@@ -51,7 +58,10 @@ import { CalendarModule } from 'primeng/calendar';
         ButtonModule,
         InputTextModule,
         DropdownModule,
-        CalendarModule
+        CalendarModule,
+        NgxMapboxGLModule.withConfig({
+            accessToken: environment.mapbox_token
+        })
     ],
     providers: [],
     bootstrap: [AppComponent]

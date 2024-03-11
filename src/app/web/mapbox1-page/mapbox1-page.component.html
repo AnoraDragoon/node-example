@@ -1,0 +1,6 @@
+<p>mapbox1-page works!</p>
+
+<div style="width: auto; height: 500px;">
+  <mgl-map [style]="'mapbox://styles/mapbox/streets-v9'" [zoom]="[9]" [center]="[-74.50, 40]"
+    (mapCreate)="map = $event"></mgl-map>
+</div>

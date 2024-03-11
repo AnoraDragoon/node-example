@@ -3,6 +3,8 @@
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 
+@import 'mapbox-gl/dist/mapbox-gl.css';
+
 .responsive-image {
   width: 100%;
   max-width: 500px;
